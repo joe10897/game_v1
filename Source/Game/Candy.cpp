@@ -6,6 +6,7 @@
 #include "../Library/gameutil.h"
 #include "../Library/gamecore.h"
 #include "Candy.h"
+#include "../OurLibrary/EnvVariables.h"
 
 namespace game_framework
 {
