@@ -59,6 +59,7 @@
 #include <string.h>
 #include "../Library/gamecore.h"
 #include "audio.h"
+#include "../OurLibrary/EnvVariables.h"
 
 namespace game_framework {
 
