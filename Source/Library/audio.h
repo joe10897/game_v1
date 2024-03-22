@@ -1,5 +1,5 @@
 /*
- * gamelib.h: ¥»ÀÉ®×Àx¹CÀ¸¬ÛÃöªºclassªºinterface
+ * gamelib.h: ï¿½ï¿½ï¿½É®ï¿½ï¿½xï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½classï¿½ï¿½interface
  * Copyright (C) 2002-2008 Woei-Kae Chen <wkc@csie.ntut.edu.tw>
  *
  * This file is part of game, a free game development framework for windows.
@@ -68,12 +68,12 @@
 using namespace std;
 
 /////////////////////////////////////////////////////////////////////////////
-// ³o­Óclass·|«Ø¥ßDirectX Audioª«¥ó¡A¥H´£¨Ñ­µ®Ä
-// ¨C­ÓPublic Interfaceªº¥Îªk³£­nÀ´¡AImplementation¥i¥H¤£À´
-// ª`·N¨Æ¶µ¡G­µ®ÄÀÉ®×¥i¥H¥ÎWAVEÀÉ(.wav)©ÎMIDIÀÉ(.mid)¡A¼Æ­Ó­µ®ÄÀÉ®×¥i¥H
-//           ²V¦X(¦P®É)¼·©ñ¡A¦ý¬O¨ä¤¤¥u¯à²V¦X¤@­ÓMIDIÀÉ¡A¨â­ÓMIDIÀÉ®×¤£
-//           ¯à¦P®É¼·©ñ¡A¦pªG¦P®É¼·©ñ¨â­ÓMIDIÀÉªº¸Ü¡A«e¤@­ÓMIDIÀÉ·|³Q°±
-//           ±¼¡C
+// ï¿½oï¿½ï¿½classï¿½|ï¿½Ø¥ï¿½DirectX Audioï¿½ï¿½ï¿½ï¿½Aï¿½Hï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½
+// ï¿½Cï¿½ï¿½Public Interfaceï¿½ï¿½ï¿½Îªkï¿½ï¿½ï¿½nï¿½ï¿½ï¿½AImplementationï¿½iï¿½Hï¿½ï¿½ï¿½ï¿½
+// ï¿½`ï¿½Nï¿½Æ¶ï¿½ï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½É®×¥iï¿½Hï¿½ï¿½WAVEï¿½ï¿½(.wav)ï¿½ï¿½MIDIï¿½ï¿½(.mid)ï¿½Aï¿½Æ­Ó­ï¿½ï¿½ï¿½ï¿½É®×¥iï¿½H
+//           ï¿½Vï¿½X(ï¿½Pï¿½ï¿½)ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½Oï¿½ä¤¤ï¿½uï¿½ï¿½Vï¿½Xï¿½@ï¿½ï¿½MIDIï¿½É¡Aï¿½ï¿½ï¿½MIDIï¿½É®×¤ï¿½
+//           ï¿½ï¿½Pï¿½É¼ï¿½ï¿½ï¿½Aï¿½pï¿½Gï¿½Pï¿½É¼ï¿½ï¿½ï¿½ï¿½ï¿½MIDIï¿½Éªï¿½ï¿½Ü¡Aï¿½eï¿½@ï¿½ï¿½MIDIï¿½É·|ï¿½Qï¿½ï¿½
+//           ï¿½ï¿½ï¿½C
 /////////////////////////////////////////////////////////////////////////////
 
 namespace game_framework {
@@ -81,15 +81,15 @@ namespace game_framework {
 class CAudio {
 public:
 	~CAudio();
-	void           Close();						// Ãö³¬Direct Sound¤¶­±
-	static CAudio* Instance();					// ¨ú±oCAudioªºInstance
-	bool           Load(unsigned, char *);		// ¸ü¤J½s¸¹iªºÁn­µ¡A«ü©wMIDIÀÉ®×
-	bool           Open();						// ¶}±ÒDirect Sound¤¶­±
-	void		   Pause();						// ¼È°±¼½©ñ©Ò¦³­µ®Ä
-	void           Play(unsigned, bool=false);	// ¶}©l¼·©ñ½s¸¹iªºÁn­µ¡A«ü©w¬O§_­«ÂÐ¼·©ñ
-	void		   Resume();					// ´_­ì¼È°±¼½©ñªº­µ®Ä
-	void           SetPowerResume();			// ¹q·½«ì´_
-	void           Stop(unsigned);				// °±¤î¼·©ñ½s¸¹iªºÁn­µ
+	void           Close();						// ï¿½ï¿½ï¿½ï¿½Direct Soundï¿½ï¿½ï¿½ï¿½
+	static CAudio* Instance();					// ï¿½ï¿½ï¿½oCAudioï¿½ï¿½Instance
+	bool           Load(unsigned, char *);		// ï¿½ï¿½ï¿½Jï¿½sï¿½ï¿½iï¿½ï¿½ï¿½nï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½wMIDIï¿½É®ï¿½
+	bool           Open();						// ï¿½}ï¿½ï¿½Direct Soundï¿½ï¿½ï¿½ï¿½
+	void		   Pause();						// ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½Ò¦ï¿½ï¿½ï¿½ï¿½ï¿½
+	void           Play(unsigned, bool=false);	// ï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½sï¿½ï¿½iï¿½ï¿½ï¿½nï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½wï¿½Oï¿½_ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½
+	void		   Resume();					// ï¿½_ï¿½ï¿½È°ï¿½ï¿½ï¿½ï¿½ñªº­ï¿½ï¿½ï¿½
+	void           SetPowerResume();			// ï¿½qï¿½ï¿½ï¿½ï¿½_
+	void           Stop(unsigned);				// ï¿½ï¿½ï¿½î¼·ï¿½ï¿½sï¿½ï¿½iï¿½ï¿½ï¿½nï¿½ï¿½
 private:
 	class Info {
 	public:
@@ -103,7 +103,7 @@ private:
 	static void ExecuteMciCommand(char *); // 
 	void SendMciCommand(char *);	// 
 	CAudio();						// private constructor
-	static CAudio		audio;		// ¦Û°Êdestruct
+	static CAudio		audio;		// ï¿½Û°ï¿½destruct
 	map<int, Info>		info;
 	bool				isOpened;
     HANDLE				hThread;	// MCI command thread
