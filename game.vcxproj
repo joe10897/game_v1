@@ -244,18 +244,11 @@
     <ClCompile Include="Source\Core\StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Source\Game\audio.cpp" />
-    <ClCompile Include="Source\Game\Blast.cpp" />
-    <ClCompile Include="Source\Game\Candy.cpp" />
-    <ClCompile Include="Source\Game\GameArea.cpp" />
     <ClCompile Include="Source\Game\mygame_initialize.cpp" />
     <ClCompile Include="Source\Game\mygame_over.cpp" />
     <ClCompile Include="Source\Game\mygame_run.cpp" />
-    <ClCompile Include="Source\Game\ScoreBoard.cpp" />
-    <ClCompile Include="Source\Game\Stage.cpp" />
     <ClCompile Include="Source\Library\gamecore.cpp" />
     <ClCompile Include="Source\Library\gameutil.cpp" />
-    <ClCompile Include="Source\OurLibrary\CInteger.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Core\audio.h" />
@@ -265,19 +258,11 @@
     <ClInclude Include="Source\Core\MainFrm.h" />
     <ClInclude Include="Source\Core\Resource.h" />
     <ClInclude Include="Source\Core\StdAfx.h" />
-    <ClInclude Include="Source\Game\audio.h" />
-    <ClInclude Include="Source\Game\AudioID.h" />
-    <ClInclude Include="Source\Game\Blast.h" />
-    <ClInclude Include="Source\Game\Candy.h" />
     <ClInclude Include="Source\Game\config.h" />
-    <ClInclude Include="Source\Game\GameArea.h" />
     <ClInclude Include="Source\Game\mygame.h" />
     <ClInclude Include="Source\Game\Resource.h" />
-    <ClInclude Include="Source\Game\ScoreBoard.h" />
-    <ClInclude Include="Source\Game\Stage.h" />
     <ClInclude Include="Source\Library\gamecore.h" />
     <ClInclude Include="Source\Library\gameutil.h" />
-    <ClInclude Include="Source\OurLibrary\CInteger.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Source\Core\game.rc" />
