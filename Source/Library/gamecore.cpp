@@ -1025,7 +1025,7 @@ namespace game_framework {
 	void CGameState::ShowLoading()
 	{
 		CMovingBitmap loading;
-		loading.LoadBitmap("..\Bitmaps\\loginLoading.bmp");
+		loading.LoadBitmap("../../Bitmaps/loginLoading.bmp");
 		loading.SetTopLeft(0, 0);
 		loading.ShowBitmap();
 		CDDraw::BltBackToPrimary();
