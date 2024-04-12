@@ -67,8 +67,12 @@ namespace game_framework {
 	private:
 		CMovingBitmap logo;								// csieªºlogo
 		CMovingBitmap background;
-		CMovingBitmap playBtnBmp1;
 		CMovingBitmap playButton;
+		CMovingBitmap clickedPlayButton;
+		CMovingBitmap tiffy;
+		CMovingBitmap toffee;
+		CMovingBitmap candycrush;
+		bool playBtnClicked, finishLoaded;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
