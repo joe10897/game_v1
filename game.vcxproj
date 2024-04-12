@@ -251,6 +251,9 @@
     <ClCompile Include="Source\Library\gameutil.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AudioID.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
     <ClInclude Include="Source\Core\Game.h" />
     <ClInclude Include="Source\Core\gameDoc.h" />
     <ClInclude Include="Source\Core\gameView.h" />

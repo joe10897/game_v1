@@ -53,7 +53,7 @@ void CGameStateInit::OnInit()
 
 	//Load Toffee
 	toffee.LoadBitmap({ "Bitmaps\\Toffee_1.bmp","Bitmaps\\Toffee_2.bmp","Bitmaps\\Toffee_3.bmp","Bitmaps\\Toffee_4.bmp","Bitmaps\\Toffee_5.bmp","Bitmaps\\Toffee_6.bmp" },RGB(255,255,255));
-	toffee.SetTopLeft(700, 60);
+	toffee.SetTopLeft(900, 60);
 	toffee.SetAnimation(48, false);
 
 	//Load Candy Crush Logo
@@ -61,8 +61,14 @@ void CGameStateInit::OnInit()
 		"Bitmaps\\candy_crush (7).bmp" ,"Bitmaps\\candy_crush (8).bmp" ,"Bitmaps\\candy_crush (9).bmp" ,"Bitmaps\\candy_crush (10).bmp" ,"Bitmaps\\candy_crush (11).bmp" ,"Bitmaps\\candy_crush (12).bmp" ,"Bitmaps\\candy_crush (13).bmp" ,
 		"Bitmaps\\candy_crush (14).bmp" ,"Bitmaps\\candy_crush (15).bmp" ,"Bitmaps\\candy_crush (16).bmp" ,"Bitmaps\\candy_crush (17).bmp" ,"Bitmaps\\candy_crush (18).bmp" ,"Bitmaps\\candy_crush (19).bmp",
 		"Bitmaps\\candy_crush (20).bmp","Bitmaps\\candy_crush (21).bmp","Bitmaps\\candy_crush (22).bmp","Bitmaps\\candy_crush (23).bmp" }, RGB(255, 255, 255));
-	candycrush.SetTopLeft(250, -50);
-	candycrush.SetAnimation(60, false);
+	candycrush.SetTopLeft(350, -50);
+	candycrush.SetAnimation(60, true);
+	candycrush.ToggleAnimation();
+
+	//load audio
+	CAudio::Instance()->Load(AUDIO_STAGE, "sounds\\Overworld_Level_Select.mp3");
+	CAudio::Instance()->Load(AUDIO_BTN_CLICK, "sounds\\button_press.wav");
+	CAudio::Instance()->Load(AUDIO_BTN_RELEASE, "sounds\\button_release.wav");
 }
 
 void CGameStateInit::OnBeginState()
@@ -82,6 +88,7 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 {
 	GotoGameState(GAME_STATE_RUN);		// ¤Á´«¦ÜGAME_STATE_RUN
 }
+
 
 void CGameStateInit::OnShow()
 {
