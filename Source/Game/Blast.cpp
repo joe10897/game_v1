@@ -3,7 +3,7 @@
 #include "Resource.h"
 #include <mmsystem.h>
 #include <ddraw.h>
-#include "audio.h"
+#include "../Library/audio.h"
 #include "../Library/gamecore.h"
 #include "Blast.h"
 
@@ -314,41 +314,41 @@ namespace game_framework
 		}
 	}
 
-	//void SuperBlast::ShowLightning(bool showAll)
-	//{
-	//	//chocalate.SetTopLeft(x, y);
-	//	//chocalate.OnShow();	//Show chocalate
-	//	CDC *pDC = CDDraw::GetBackCDC();
+	void SuperBlast::ShowLightning(bool showAll)
+	{
+		//chocalate.SetTopLeft(x, y);
+		//chocalate.OnShow();	//Show chocalate
+		CDC *pDC = CDDraw::GetBackCDC();
 
-	//	CPen penLighting;
-	//	CPen *pPen;
+		CPen penLighting;
+		CPen *pPen;
 
-	//	penLighting.CreatePen(PS_SOLID | PS_COSMETIC, showAll ? 5 : rand() % 10 + 1, RGB(207, 249, 245));
+		penLighting.CreatePen(PS_SOLID | PS_COSMETIC, showAll ? 5 : rand() % 10 + 1, RGB(207, 249, 245));
 
-	//	pPen = pDC->SelectObject(&penLighting);
+		pPen = pDC->SelectObject(&penLighting);
 
-	//	if (showAll)
-	//	{	// Show all lightning effect at one time
-	//		for (auto i = target.begin(); i != target.end(); i++)
-	//		{
-	//			DrawLine(pDC, CPoint(x + 25, y + 25), *i); //Draw a lightning from current position to target
-	//		}
-	//	}
-	//	else
-	//	{
-	//		for (int i = lightningDelay; i >= 0; i--)
-	//		{
-	//			if (curShow - i >= 0 && curShow - i < target.size())
-	//			{
-	//				DrawLine(pDC, CPoint(x + 25, y + 25), target[curShow - i]);//Draw a lightning from current position to target
-	//			}
-	//		}
-	//	}
-	//	// Restore the previous pen.
-	//	pDC->SelectObject(pPen);
-	//	CDDraw::ReleaseBackCDC();
-	//	Sleep(5);
-	//}
+		if (showAll)
+		{	// Show all lightning effect at one time
+			for (auto i = target.begin(); i != target.end(); i++)
+			{
+				DrawLine(pDC, CPoint(x + 25, y + 25), *i); //Draw a lightning from current position to target
+			}
+		}
+		else
+		{
+			for (int i = lightningDelay; i >= 0; i--)
+			{
+				if (curShow - i >= 0 && curShow - i < target.size())
+				{
+					DrawLine(pDC, CPoint(x + 25, y + 25), target[curShow - i]);//draw a lightning from current position to target
+				}
+			}
+		}
+		// Restore the previous pen.
+		pDC->SelectObject(pPen);
+		CDDraw::ReleaseBackCDC();
+		Sleep(5);
+	}
 
 	void SuperBlast::DrawLine(CDC* pDC, const CPoint& start, const CPoint& end)
 	{

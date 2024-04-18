@@ -2,7 +2,7 @@
 #include "../Core/Resource.h"
 #include <mmsystem.h>
 #include <ddraw.h>
-#include "../Core/audio.h"
+#include "../Library/audio.h"
 #include "../Library/gameutil.h"
 #include "../Library/gamecore.h"
 #include "mygame.h"
@@ -24,7 +24,7 @@ CGameStateRun::~CGameStateRun()
 
 void CGameStateRun::OnBeginState()
 {
-	background.SetTopLeft(0, 0);						// ³]©w­I´ºªº°_©l®y¼Ð
+	background.SetTopLeft(0, 0);						// ï¿½]ï¿½wï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½lï¿½yï¿½ï¿½
 }
 
 void CGameStateRun::OnMove()							// ï¿½ï¿½ï¿½Ê¹Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
@@ -34,7 +34,7 @@ void CGameStateRun::OnMove()							// ï¿½ï¿½ï¿½Ê¹Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 void CGameStateRun::OnInit()  								// ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¤Î¹Ï§Î³]ï¿½w
 {
-	background.LoadBitmap("Bitmaps\\inGameBG1.bmp");// ¸ü¤J­I´ºªº¹Ï§Î
+	background.LoadBitmap("Bitmaps\\inGameBG1.bmp");// ï¿½ï¿½ï¿½Jï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½Ï§ï¿½
 }
 
 void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)

@@ -7,7 +7,7 @@
 #include <ddraw.h>
 #include <algorithm>
 #include <set>
-#include "audio.h"
+#include "../Library/audio.h"
 #include "../Library/gamecore.h"
 #include "../Game/config.h"
 #include "Blast.h"

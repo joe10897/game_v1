@@ -2,7 +2,7 @@
 #include "../Core/Resource.h"
 #include <mmsystem.h>
 #include <ddraw.h>
-#include "../Core/audio.h"
+#include "../Library/audio.h"
 #include "../Library/gameutil.h"
 #include "../Library/gamecore.h"
 #include "mygame.h"
@@ -105,7 +105,7 @@ void CGameStateInit::OnShow()
 	tiffy.ShowBitmap();
 	toffee.ShowBitmap();
 	candycrush.ShowBitmap();
-	//¶K¤WPlay Button
+	//ï¿½Kï¿½WPlay Button
 	//if (playBtnClicked)
 	//{
 	//	clickedPlayButton.SetTopLeft(SIZE_X / 2 , SIZE_Y / 2);
