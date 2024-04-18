@@ -6,6 +6,9 @@
 #include "../Library/gameutil.h"
 #include "../Library/gamecore.h"
 #include "mygame.h"
+#include <string>
+#include <string.h>
+#include <set>
 
 using namespace game_framework;
 
@@ -14,15 +17,14 @@ using namespace game_framework;
 /////////////////////////////////////////////////////////////////////////////
 
 CGameStateRun::CGameStateRun(CGame *g) : CGameState(g)
-{
-}
+{}
 
 CGameStateRun::~CGameStateRun()
-{
-}
+{}
 
 void CGameStateRun::OnBeginState()
 {
+	background.SetTopLeft(0, 0);						// 設定背景的起始座標
 }
 
 void CGameStateRun::OnMove()							// 移動遊戲元素
@@ -32,7 +34,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 
 void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 {
-	
+	background.LoadBitmap("Bitmaps\\inGameBG1.bmp");// 載入背景的圖形
 }
 
 void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
@@ -67,4 +69,5 @@ void CGameStateRun::OnRButtonUp(UINT nFlags, CPoint point)	// 處理滑鼠的動作
 
 void CGameStateRun::OnShow()
 {
+	background.ShowBitmap();
 }
