@@ -116,10 +116,11 @@ namespace game_framework {
 		return true;
 	}
 
-	//Game Area//
-	GameArea CGameState::gameArea;
-	CMovingBitmap CGameState::settingButton;
-	CMovingBitmap CGameState::settingButtonClicked;
+	////Game Area//
+	//CMovingBitmap CGameState::settingButton;
+	//CMovingBitmap CGameState::settingButtonClicked;
+	////GameArea CGameState::gameArea;
+
 
 	void CGame::OnInit()	// OnInit() �u�b�{���@�}�l�ɰ���@��
 	{

@@ -381,6 +381,9 @@ namespace game_framework {
 		return isOverlap;
 	}
 
+	//Game Area//
+	//GameArea CGameState::gameArea;
+
 	/////////////////////////////////////////////////////////////////////////////
 	// CTextDraw: The class provide the ability to draw the text.
 	// �o�� class ���Ѥ�r���e�{
