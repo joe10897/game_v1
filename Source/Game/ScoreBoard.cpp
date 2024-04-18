@@ -2,7 +2,7 @@
 #include "Resource.h"
 #include <mmsystem.h>
 #include <ddraw.h>
-#include "audio.h"
+#include "../Library/audio.h"
 #include "../Library/gamecore.h"
 #include "ScoreBoard.h"
 
