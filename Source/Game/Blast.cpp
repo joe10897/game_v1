@@ -271,13 +271,15 @@ namespace game_framework
 		return curShow >= 29;
 	}
 
-	//CAnimation SuperBlast::chocalate;
+	CMovingBitmap SuperBlast::chocalate;
 
 	SuperBlast::SuperBlast(int x, int y, int delay, bool showAll) :curShow(0), lightningDelay(delay), showAll(showAll)
 	{
 		this->x = x;
 		this->y = y;
 		/*chocalate.SetDelayCount(3);*/
+		chocalate.SetAnimation(3000, TRUE);//not be sure
+
 		/*sound = &CGameState::sound;*/
 	}
 
@@ -290,6 +292,7 @@ namespace game_framework
 	{
 		curShow++;
 		/*chocalate.OnMove();*/
+		chocalate.ToggleAnimation();//not be sure
 
 		for (auto i = magicBlasts.begin(); i != magicBlasts.end();)
 		{
@@ -316,8 +319,8 @@ namespace game_framework
 
 	void SuperBlast::ShowLightning(bool showAll)
 	{
-		//chocalate.SetTopLeft(x, y);
-		//chocalate.OnShow();	//Show chocalate
+		chocalate.SetTopLeft(x, y);
+		chocalate.ShowBitmap();	//Show chocalate
 		CDC *pDC = CDDraw::GetBackCDC();
 
 		CPen penLighting;
@@ -412,14 +415,16 @@ namespace game_framework
 		return ((curShow >= (int(target.size()) + lightningDelay) || (showAll && curShow >= 10)));
 	}
 
-	//void SuperBlast::LoadBitmap()
-	//{
-	//	chocalate.AddBitmap("Bitmaps\\BlastSuperCandy1.bmp", RGB(254, 191, 200));
-	//	chocalate.AddBitmap("Bitmaps\\BlastSuperCandy2.bmp", RGB(254, 191, 200));
-	//	chocalate.AddBitmap("Bitmaps\\BlastSuperCandy3.bmp", RGB(254, 191, 200));
-	//	chocalate.AddBitmap("Bitmaps\\BlastSuperCandy4.bmp", RGB(254, 191, 200));
-	//	chocalate.AddBitmap("Bitmaps\\BlastSuperCandy5.bmp", RGB(254, 191, 200));
-	//}
+	void SuperBlast::LoadBitmap()
+	{
+		chocalate.LoadBitmap({ 
+			"Bitmaps\\BlastSuperCandy1.bmp",
+			"Bitmaps\\BlastSuperCandy2.bmp",
+			"Bitmaps\\BlastSuperCandy3.bmp",
+			"Bitmaps\\BlastSuperCandy4.bmp",
+			"Bitmaps\\BlastSuperCandy5.bmp"
+			}, RGB(254, 191, 200));
+	}
 
 	CMovingBitmap MagicBlast::bmp[4];
 
