@@ -57,7 +57,6 @@
     <ClCompile Include="Source\Game\mygame_run.cpp">
       <Filter>MyGame</Filter>
     </ClCompile>
-<<<<<<< HEAD
     <ClCompile Include="Source\Core\audio.cpp">
       <Filter>GameLibrary</Filter>
     </ClCompile>
@@ -76,8 +75,6 @@
     <ClCompile Include="Source\Game\ScoreBoard.cpp">
       <Filter>MyGame</Filter>
     </ClCompile>
-=======
->>>>>>> 10724008a85bb9463bb4cdd2688a47556a03e727
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Library\audio.h">
@@ -113,7 +110,6 @@
     <ClInclude Include="Source\Game\config.h">
       <Filter>MyGame</Filter>
     </ClInclude>
-<<<<<<< HEAD
     <ClInclude Include="Source\Game\Resource.h">
       <Filter>MyGame</Filter>
     </ClInclude>
@@ -138,11 +134,9 @@
     <ClInclude Include="Source\Game\ScoreBoard.h">
       <Filter>MyGame</Filter>
     </ClInclude>
-=======
     <ClInclude Include="AudioID.h">
       <Filter>MyGame</Filter>
     </ClInclude>
->>>>>>> 10724008a85bb9463bb4cdd2688a47556a03e727
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Source\Core\game.rc">
