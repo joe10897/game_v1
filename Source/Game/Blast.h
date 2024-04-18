@@ -87,6 +87,7 @@ namespace game_framework
 		list<CPoint>* GetRoutePoints(CPoint, CPoint);
 
 		//static CAnimation chocalate;
+		static CMovingBitmap chocalate;
 		vector<CPoint> target;
 		list<MagicBlast> magicBlasts;
 		int curShow;

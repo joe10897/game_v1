@@ -119,9 +119,6 @@
     <ClInclude Include="Source\Game\Blast.h">
       <Filter>MyGame</Filter>
     </ClInclude>
-    <ClInclude Include="AudioID.h">
-      <Filter>MyGame</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Game\GameArea.h">
       <Filter>MyGame</Filter>
     </ClInclude>
