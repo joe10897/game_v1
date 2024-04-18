@@ -62,7 +62,7 @@ void CGameStateInit::OnInit()
 		"Bitmaps\\candy_crush (14).bmp" ,"Bitmaps\\candy_crush (15).bmp" ,"Bitmaps\\candy_crush (16).bmp" ,"Bitmaps\\candy_crush (17).bmp" ,"Bitmaps\\candy_crush (18).bmp" ,"Bitmaps\\candy_crush (19).bmp",
 		"Bitmaps\\candy_crush (20).bmp","Bitmaps\\candy_crush (21).bmp","Bitmaps\\candy_crush (22).bmp","Bitmaps\\candy_crush (23).bmp" }, RGB(255, 255, 255));
 	candycrush.SetTopLeft(350, -50);
-	candycrush.SetAnimation(60, true);
+	candycrush.SetAnimation(60, false);
 	candycrush.ToggleAnimation();
 
 	//load audio

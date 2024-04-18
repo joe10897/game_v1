@@ -157,6 +157,7 @@ namespace game_framework {
 		CGame *game;
 		CMovingBitmap loadingBitmap;
 		static CMovingBitmap settingButton, settingButtonClicked;
+		//static GameArea gameArea;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
