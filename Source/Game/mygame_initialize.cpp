@@ -69,6 +69,14 @@ void CGameStateInit::OnInit()
 	CAudio::Instance()->Load(AUDIO_STAGE, "sounds\\Overworld_Level_Select.mp3");
 	CAudio::Instance()->Load(AUDIO_BTN_CLICK, "sounds\\button_press.wav");
 	CAudio::Instance()->Load(AUDIO_BTN_RELEASE, "sounds\\button_release.wav");
+
+	//load settinf button
+	//settingButton.LoadBitmap({"Bitmaps/SettingButton-0.bmp"}, RGB(255, 255, 255));
+	//settingButton.LoadBitmap({"Bitmaps/SettingButton-1.bmp" }, RGB(255, 255, 255));
+	//settingButton.LoadBitmap({"Bitmaps/SettingButton-2.bmp"}, RGB(255, 255, 255));
+	//settingButton.LoadBitmap({ "Bitmaps/SettingButton-1.bmp" }, RGB(255, 255, 255));
+	//settingButtonClicked.LoadBitmap("Bitmaps\\settingButtonClicked.bmp", RGB(0, 0, 0));
+
 }
 
 void CGameStateInit::OnBeginState()

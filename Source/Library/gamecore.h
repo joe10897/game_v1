@@ -156,6 +156,7 @@ namespace game_framework {
 		virtual void OnShow() = 0;								// 顯示這個狀態的遊戲畫面
 		CGame *game;
 		CMovingBitmap loadingBitmap;
+		static CMovingBitmap settingButton, settingButtonClicked;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////

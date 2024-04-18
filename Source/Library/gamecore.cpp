@@ -116,6 +116,10 @@ namespace game_framework {
 		return true;
 	}
 
+	//Game Area//
+	CMovingBitmap CGameState::settingButton;
+	CMovingBitmap CGameState::settingButtonClicked;
+
 	void CGame::OnInit()	// OnInit() 只在程式一開始時執行一次
 	{
 		//
