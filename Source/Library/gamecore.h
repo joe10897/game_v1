@@ -1,5 +1,5 @@
 #pragma once
-#include "gameutil.h"
+#include "./gameutil.h"
 #include <ddraw.h>
 
 /////////////////////////////////////////////////////////////////////////////
@@ -138,26 +138,27 @@ namespace game_framework {
 		// virtual functions, ���~�Ӫ̴���implementation
 		//
 		virtual ~CGameState() {}								// virtual destructor
-		virtual void OnBeginState() {}							// �]�w�C���i�J�o�Ӫ��A�ɩһݪ����
-		virtual void OnInit() {}								// ���A����Ȥιϧγ]�w
-		virtual void OnKeyDown(UINT, UINT, UINT) {}				// �B�z��LDown���ʧ@
-		virtual void OnKeyUp(UINT, UINT, UINT) {}				// �B�z��LUp���ʧ@
-		virtual void OnLButtonDown(UINT nFlags, CPoint point) {}// �B�z�ƹ����ʧ@
-		virtual void OnLButtonUp(UINT nFlags, CPoint point) {}	// �B�z�ƹ����ʧ@
-		virtual void OnMouseMove(UINT nFlags, CPoint point) {}  // �B�z�ƹ����ʧ@ 
-		virtual void OnRButtonDown(UINT nFlags, CPoint point) {}// �B�z�ƹ����ʧ@
-		virtual void OnRButtonUp(UINT nFlags, CPoint point) {}	// �B�z�ƹ����ʧ@
-		static bool sound, music;								//Switches of sound and music //Add by Limbo 
+		virtual void OnBeginState() {}							
+		virtual void OnInit() {}								
+		virtual void OnKeyDown(UINT, UINT, UINT) {}				
+		virtual void OnKeyUp(UINT, UINT, UINT) {}				
+		virtual void OnLButtonDown(UINT nFlags, CPoint point) {}
+		virtual void OnLButtonUp(UINT nFlags, CPoint point) {}	
+		virtual void OnMouseMove(UINT nFlags, CPoint point) {}  
+		virtual void OnRButtonDown(UINT nFlags, CPoint point) {}
+		virtual void OnRButtonUp(UINT nFlags, CPoint point) {}	
+		static bool sound;
+		static bool	music;								//Switches of sound and music
 
 	protected:
-		void GotoGameState(int state);							// ���D�ܫ��w��state
-		void ShowInitProgress(int percent, string message);						// ��ܪ�l�ƪ��i��
+		void GotoGameState(int state);							
+		void ShowInitProgress(int percent, string message);						
 		void ShowLoading();
 																				//
-		// virtual functions, ���~�Ӫ̴���implementation
+		// virtual functions
 		//
-		virtual void OnMove() {}								// ���ʳo�Ӫ��A���C������
-		virtual void OnShow() = 0;								// ��ܳo�Ӫ��A���C���e��
+		virtual void OnMove() {}
+		virtual void OnShow() = 0;
 		CGame *game;
 		CMovingBitmap loadingBitmap;
 	};
@@ -197,5 +198,48 @@ namespace game_framework {
 		CGameState		*gameState;			// pointer���V�ثe���C�����A
 		CGameState		*gameStateTable[3];	// �C�����A����pointer
 		static CGame	instance;			// �C���ߤ@��instance
+	};
+
+	/////////////////////////////////////////////////////////////////////////////
+	// 這個class提供顯示整數圖形的能力
+	// 每個Public Interface的用法都要懂，Implementation可以不懂
+	/////////////////////////////////////////////////////////////////////////////
+	class CInteger {
+		friend int operator+(const CInteger& lhs, const CInteger& rhs);
+		friend int operator-(const CInteger& lhs, const CInteger& rhs);
+		friend int operator*(const CInteger& lhs, const CInteger& rhs);
+		friend int operator/(const CInteger& lhs, const CInteger& rhs);
+		friend bool operator==(const CInteger& lhs, const CInteger& rhs);
+		friend bool operator<(const CInteger& lhs, const CInteger& rhs);
+		friend bool operator<=(const CInteger& lhs, const CInteger& rhs);
+		friend bool operator>(const CInteger& lhs, const CInteger& rhs);
+		friend bool operator>=(const CInteger& lhs, const CInteger& rhs);
+	public:
+		CInteger();
+		CInteger(int);
+		CInteger(double);
+		int  GetInteger();			// 回傳整數值
+		void LoadBitmap();			// 載入0..9及負號之圖形
+		void operator+=(const int rhs);
+		void operator++(int);
+		void operator++();
+		void operator-=(const int rhs);
+		void operator--(int);
+		void operator--();
+		void operator*=(const int rhs);
+		void operator/=(const int rhs);
+		void operator=(const int rhs);
+		void SetInteger(int);		// 設定整數值
+		void SetTopLeft(int, int);	// 將動畫的左上角座標移至 (x,y)
+		void ShowBitmap();			// 將動畫貼到螢幕	
+		void SetDigit(int digit);   // set the size of the number
+		void SetType(int Type);
+	private:
+		int NUMDIGITS;			// 共顯示NUMDIGITS個位數
+		static CMovingBitmap digit[44]; // 儲存0..9及負號之圖形(bitmap)
+		int x, y;						// 顯示的座標
+		int n;							// 整數值
+		bool isBmpLoaded;				// 是否已經載入圖形
+		int type;
 	};
 }
