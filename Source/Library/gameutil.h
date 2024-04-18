@@ -1,6 +1,6 @@
 #pragma once
 /*
- * gamelib.h: æœ¬æª”æ¡ˆå„²éŠæˆ²ç›¸é—œçš„classçš„interface
+ * gamelib.h: ¥»ÀÉ®×Àx¹CÀ¸¬ÛÃöªºclassªºinterface
  * Copyright (C) 2002-2008 Woei-Kae Chen <wkc@csie.ntut.edu.tw>
  *
  * This file is part of game, a free game development framework for windows.
@@ -45,7 +45,6 @@
  *      2. Remove constantness of CAnimation::DELAY_COUNT.
  *      3. Enhance CAnimation to support SetDelayCount(), Reset(), and IsFinalBitmap().
  *      4. Remove CAnimation::GetLocation() and CMovingBitmap::GetLocation().
- *      4. Remove CAnimation::GetLocation() and CMovingBitmap::GetLocation().
  *      5. Bitmap coordinate can no longer be set by CMovingBitmap::LoadBitmap().
  *         Defauts to (0,0).
  *   2006-09-09 V4.3
@@ -76,8 +75,8 @@ using namespace std;
 namespace game_framework {
 
 	/////////////////////////////////////////////////////////////////////////////
-	// é€™å€‹classæä¾›å‹•æ…‹(å¯ä»¥ç§»å‹•)çš„åœ–å½¢
-	// æ¯å€‹Public Interfaceçš„ç”¨æ³•éƒ½è¦æ‡‚ï¼ŒImplementationå¯ä»¥ä¸æ‡‚
+	// ³o­Óclass´£¨Ñ°ÊºA(¥i¥H²¾°Ê)ªº¹Ï§Î
+	// ¨C­ÓPublic Interfaceªº¥Îªk³£­nÀ´¡AImplementation¥i¥H¤£À´
 	/////////////////////////////////////////////////////////////////////////////
 
 	class CMovingBitmap {
@@ -85,10 +84,10 @@ namespace game_framework {
 		CMovingBitmap();
 
 		/* The function for loading the bitmap. */
-		void  LoadBitmap(int, COLORREF = CLR_INVALID);		// ï¿½ï¿½ï¿½Jï¿½Ï¡Aï¿½ï¿½ï¿½wï¿½Ïªï¿½ï¿½sï¿½ï¿½(resource)ï¿½Î³zï¿½ï¿½ï¿½ï¿½
-		void  LoadBitmap(char*, COLORREF = CLR_INVALID);	// ï¿½ï¿½ï¿½Jï¿½Ï¡Aï¿½ï¿½ï¿½wï¿½Ïªï¿½ï¿½É¦Wï¿½Î³zï¿½ï¿½ï¿½ï¿½
-		void  LoadBitmap(vector<char*>, COLORREF = CLR_INVALID);	// ï¿½ï¿½ï¿½Jï¿½Ï¡Aï¿½ï¿½ï¿½wï¿½Ïªï¿½ï¿½É¦Wï¿½Î³zï¿½ï¿½ï¿½ï¿½
-		void  LoadBitmapByString(vector<string>, COLORREF = CLR_INVALID);	// ï¿½ï¿½ï¿½Jï¿½Ï¡Aï¿½ï¿½ï¿½wï¿½Ïªï¿½ï¿½É¦Wï¿½Î³zï¿½ï¿½ï¿½ï¿½
+		void  LoadBitmap(int, COLORREF = CLR_INVALID);		// ¸ü¤J¹Ï¡A«ü©w¹Ïªº½s¸¹(resource)¤Î³z©ú¦â
+		void  LoadBitmap(char*, COLORREF = CLR_INVALID);	// ¸ü¤J¹Ï¡A«ü©w¹ÏªºÀÉ¦W¤Î³z©ú¦â
+		void  LoadBitmap(vector<char*>, COLORREF = CLR_INVALID);	// ¸ü¤J¹Ï¡A«ü©w¹ÏªºÀÉ¦W¤Î³z©ú¦â
+		void  LoadBitmapByString(vector<string>, COLORREF = CLR_INVALID);	// ¸ü¤J¹Ï¡A«ü©w¹ÏªºÀÉ¦W¤Î³z©ú¦â
 		void  LoadEmptyBitmap(int height, int weight);
 		
 		/* Unshow the bitmap. */
@@ -97,11 +96,11 @@ namespace game_framework {
 		/* Setter */
 		void  SetAnimation(int delay, bool _once);
 		void  SetFrameIndexOfBitmap(int frame);
-		void  SetTopLeft(int, int);			// ï¿½Nï¿½Ïªï¿½ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½yï¿½Ğ²ï¿½ï¿½ï¿½ (x,y)
+		void  SetTopLeft(int, int);			// ±N¹Ïªº¥ª¤W¨¤®y¼Ğ²¾¦Ü (x,y)
 
 		/* Show the bitmap with or without factor. */
-		void  ShowBitmap();					// ï¿½Nï¿½Ï¶Kï¿½ï¿½Ã¹ï¿½
-		void  ShowBitmap(double factor);	// ï¿½Nï¿½Ï¶Kï¿½ï¿½Ã¹ï¿½ factor < 1ï¿½ï¿½ï¿½Yï¿½pï¿½A>1ï¿½É©ï¿½jï¿½Cï¿½`ï¿½Nï¿½Gï¿½İ­nVGAï¿½dï¿½wï¿½éªºï¿½ä´©ï¿½Aï¿½_ï¿½hï¿½|ï¿½ÜºC
+		void  ShowBitmap();					// ±N¹Ï¶K¨ì¿Ã¹õ
+		void  ShowBitmap(double factor);	// ±N¹Ï¶K¨ì¿Ã¹õ factor < 1®ÉÁY¤p¡A>1®É©ñ¤j¡Cª`·N¡G»İ­nVGA¥dµwÅéªº¤ä´©¡A§_«h·|«ÜºC
 		
 		/* Getter */
 		int   GetFrameIndexOfBitmap();
@@ -124,26 +123,26 @@ namespace game_framework {
 		void  ToggleAnimation();
 
 	protected:
-		//! ï¿½ï¿½eï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Ş­È¡C
+		//! ·í«e´Vªº¯Á¤Ş­È¡C
 		int frameIndex = 0;
-		//! ï¿½ï¿½eï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½C
+		//! ·í«e´V¤Á´«ªº©µ¿ğ¡C
 		int delayCount = 10;
-		//! ï¿½xï¿½sï¿½ï¿½eï¿½Êµeï¿½ï¿½ï¿½ï¿½ï¿½Æ¡C
+		//! Àx¦s·í«e°Êµeªº¦¸¼Æ¡C
 		int animationCount = -1;
-		//! ï¿½xï¿½sï¿½ï¿½ï¿½ï¿½Oï¿½_ï¿½ï¿½ï¿½Êµeï¿½C
+		//! Àx¦sª«¥ó¬O§_¬°°Êµe¡C
 		bool isAnimation = false;
-		//! ï¿½xï¿½sï¿½ï¿½ï¿½ï¿½Êµeï¿½Oï¿½_ï¿½wï¿½ï¿½ï¿½ï¿½
+		//! Àx¦sª«¥ó°Êµe¬O§_¤wµ²§ô
 		bool isAnimationDone = true;
-		//! ï¿½xï¿½sï¿½Ï¤ï¿½ï¿½Oï¿½_ï¿½wÅªï¿½ï¿½
+		//! Àx¦s¹Ï¤ù¬O§_¤wÅª¨ú
 		bool isBitmapLoaded = false;	// whether a bitmap has been loaded
-		//! ï¿½xï¿½sï¿½ï¿½ï¿½ï¿½Êµeï¿½Oï¿½_ï¿½ï¿½ï¿½æ¦¸ï¿½Êµe
+		//! Àx¦sª«¥ó°Êµe¬O§_¬°³æ¦¸°Êµe
 		bool isOnce = false;
 		vector<CRect>    locations;			// location of the bitmap
 		vector<unsigned> surfaceID;
 		clock_t last_time = clock();
-		//! ï¿½xï¿½sï¿½ï¿½ï¿½ï¿½Åªï¿½ï¿½ï¿½ï¿½ï¿½Ï¤ï¿½ï¿½ï¿½|
+		//! Àx¦sª«¥óÅª¨úªº¹Ï¤ù¸ô®|
 		string   imageFileName = "";
-		//! ï¿½xï¿½sï¿½ï¿½ï¿½ï¿½Lï¿½oï¿½ï¿½ï¿½Ï¤ï¿½ï¿½Cï¿½ï¿½
+		//! Àx¦sª«¥ó¹LÂoªº¹Ï¤ùÃC¦â
 		COLORREF filterColor = CLR_INVALID;
 
 	private:

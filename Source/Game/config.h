@@ -1,33 +1,33 @@
 /////////////////////////////////////////////////////////////////////////////
-// ï¿½wï¿½qï¿½Cï¿½ï¿½ï¿½iï¿½]ï¿½wï¿½ï¿½ï¿½ï¿½Ò»Pï¿½ï¿½ï¿½ï¿½
+// ©w¸q¹CÀ¸¥i³]©wªºÀô¹Ò»P±ø¥ó
 /////////////////////////////////////////////////////////////////////////////
 
 #define GAME_TITLE           "Game"
-//! ï¿½]ï¿½wï¿½Cï¿½ï¿½ï¿½eï¿½ï¿½ï¿½ï¿½ï¿½ÑªRï¿½×¡]ï¿½eï¿½×¡^
+//! ³]©w¹CÀ¸µe­±ªº¸ÑªR«×¡]¼e«×¡^
 #define SIZE_X				 1280
-//! ï¿½]ï¿½wï¿½Cï¿½ï¿½ï¿½eï¿½ï¿½ï¿½ï¿½ï¿½ÑªRï¿½×¡]ï¿½ï¿½ï¿½×¡^
+//! ³]©w¹CÀ¸µe­±ªº¸ÑªR«×¡]°ª«×¡^
 #define SIZE_Y				 720
-//! ï¿½Oï¿½_ï¿½Hï¿½ï¿½ï¿½Ã¹ï¿½ï¿½è¦¡ï¿½}ï¿½Ò¹Cï¿½ï¿½
+//! ¬O§_¥H¥þ¿Ã¹õ¤è¦¡¶}±Ò¹CÀ¸
 #define OPEN_AS_FULLSCREEN	 false		
-//! ï¿½Oï¿½_ï¿½ï¿½ï¿½loading(OnInit)ï¿½ï¿½ï¿½iï¿½ï¿½
+//! ¬O§_Åã¥Üloading(OnInit)ªº¶i«×
 #define SHOW_LOAD_PROGRESS   true		
-// ï¿½Cï¿½ï¿½ï¿½eï¿½ï¿½ï¿½wï¿½]ï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½Cï¿½ï¿½(ï¿½Â¦ï¿½)
+// ¹CÀ¸µe­±¹w³]ªº­I´ºÃC¦â(¶Â¦â)
 #define DEFAULT_BG_COLOR	 RGB(0, 0, 0)	
-//! ï¿½C33msï¿½]ï¿½@ï¿½ï¿½Moveï¿½ï¿½Show(ï¿½Cï¿½ï¿½30ï¿½ï¿½)
+//! ¨C33ms¶]¤@¦¸Move¤ÎShow(¨C¬í30¦¸)
 #define GAME_CYCLE_TIME		 15		    
-//! ï¿½Oï¿½_ï¿½bdebug modeï¿½ï¿½ï¿½cycle time
+//! ¬O§_¦bdebug modeÅã¥Ücycle time
 #define SHOW_GAME_CYCLE_TIME false		
-//! ï¿½Oï¿½_ï¿½ï¿½ï¿½\ï¿½H Ctrl-Q ï¿½È°ï¿½ï¿½Cï¿½ï¿½
+//! ¬O§_¤¹³\¥H Ctrl-Q ¼È°±¹CÀ¸
 #define ENABLE_GAME_PAUSE	 false		
-//! ï¿½Ò°Ê­ï¿½ï¿½Ä¤ï¿½ï¿½ï¿½
+//! ±Ò°Ê­µ®Ä¤¶­±
 #define ENABLE_AUDIO		 true		
- //! ï¿½Oï¿½_ï¿½ï¿½ï¿½ï¿½ toolbar
+ //! ¬O§_Ãö³¬ toolbar
 #define ENABLE_TOOLBAR       false     
-//! ï¿½Oï¿½_ï¿½ï¿½ï¿½ï¿½ menu
+//! ¬O§_Ãö³¬ menu
 #define ENABLE_MENU          false      
-//! ï¿½Oï¿½_ï¿½ï¿½ï¿½ï¿½ statusbar
+//! ¬O§_Ãö³¬ statusbar
 #define ENABLE_STATUSBAR     false      
-//! ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½Î¡Aï¿½Ð³]ï¿½wï¿½ï¿½ï¿½Ø«eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÑªRï¿½ï¿½ (width)ï¿½C
+//! ¥þ¿Ã¹õ¥Î¡A½Ð³]©w¦¨¥Ø«eµøµ¡ªº¸ÑªR«× (width)¡C
 #define RESOLUTION_X     1920           
-//! ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½Î¡Aï¿½Ð³]ï¿½wï¿½ï¿½ï¿½Ø«eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÑªRï¿½ï¿½ (height)ï¿½C
+//! ¥þ¿Ã¹õ¥Î¡A½Ð³]©w¦¨¥Ø«eµøµ¡ªº¸ÑªR«× (height)¡C
 #define RESOLUTION_Y     1080          
