@@ -78,7 +78,7 @@ namespace game_framework
 		~SuperBlast();
 		void AddPoint(int x, int y);
 		bool IsLast();
-		// static void LoadBitmap();
+		static void LoadBitmap();
 		void OnMove();
 		void OnShow();
 	private:
