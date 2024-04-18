@@ -960,11 +960,7 @@ namespace game_framework {
 
 	CGameState::CGameState(CGame *g)
 	{
-<<<<<<< HEAD
 		game = g;
-=======
-		game = g; 	// �]�wgame��pointer
->>>>>>> 10724008a85bb9463bb4cdd2688a47556a03e727
 	}
 
 	void CGameState::GotoGameState(int state)
