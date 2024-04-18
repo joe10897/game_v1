@@ -338,7 +338,7 @@ namespace game_framework
 		{
 			for (int i = lightningDelay; i >= 0; i--)
 			{
-				if (curShow - i >= 0 && curShow - i < target.size())
+				if (curShow - i >= 0 && curShow - i < (int)target.size())
 				{
 					DrawLine(pDC, CPoint(x + 25, y + 25), target[curShow - i]);//draw a lightning from current position to target
 				}
