@@ -99,7 +99,7 @@
       </HeaderFileName>
     </Midl>
     <ClCompile>
-      <Optimization>Disabled</Optimization>
+      <Optimization>Full</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -113,7 +113,8 @@
       <WarningLevel>Level3</WarningLevel>
       <TreatWarningAsError>true</TreatWarningAsError>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -244,23 +245,34 @@
     <ClCompile Include="Source\Core\StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Source\Game\Blast.cpp" />
+    <ClCompile Include="Source\Game\Candy.cpp" />
+    <ClCompile Include="Source\Game\GameArea.cpp" />
     <ClCompile Include="Source\Game\mygame_initialize.cpp" />
     <ClCompile Include="Source\Game\mygame_over.cpp" />
     <ClCompile Include="Source\Game\mygame_run.cpp" />
+    <ClCompile Include="Source\Game\ScoreBoard.cpp" />
+    <ClCompile Include="Source\Game\Stage.cpp" />
     <ClCompile Include="Source\Library\gamecore.cpp" />
     <ClCompile Include="Source\Library\gameutil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Core\audio.h" />
+    <ClInclude Include="Source\Core\AudioID.h" />
     <ClInclude Include="Source\Core\Game.h" />
     <ClInclude Include="Source\Core\gameDoc.h" />
     <ClInclude Include="Source\Core\gameView.h" />
     <ClInclude Include="Source\Core\MainFrm.h" />
     <ClInclude Include="Source\Core\Resource.h" />
     <ClInclude Include="Source\Core\StdAfx.h" />
+    <ClInclude Include="Source\Game\Blast.h" />
+    <ClInclude Include="Source\Game\Candy.h" />
     <ClInclude Include="Source\Game\config.h" />
+    <ClInclude Include="Source\Game\GameArea.h" />
     <ClInclude Include="Source\Game\mygame.h" />
     <ClInclude Include="Source\Game\Resource.h" />
+    <ClInclude Include="Source\Game\ScoreBoard.h" />
+    <ClInclude Include="Source\Game\Stage.h" />
     <ClInclude Include="Source\Library\gamecore.h" />
     <ClInclude Include="Source\Library\gameutil.h" />
   </ItemGroup>
@@ -268,7 +280,6 @@
     <ResourceCompile Include="Source\Core\game.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\bitmap1.bmp" />
     <Image Include="Resources\Game Framework.png" />
     <Image Include="resources\game.ico" />
     <Image Include="resources\gameDoc.ico" />

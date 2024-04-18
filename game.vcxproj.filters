@@ -57,6 +57,21 @@
     <ClCompile Include="Source\Core\audio.cpp">
       <Filter>GameLibrary</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Game\Candy.cpp">
+      <Filter>MyGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Stage.cpp">
+      <Filter>MyGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Blast.cpp">
+      <Filter>MyGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\GameArea.cpp">
+      <Filter>MyGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\ScoreBoard.cpp">
+      <Filter>MyGame</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Library\gamecore.h">
@@ -95,6 +110,24 @@
     <ClInclude Include="Source\Core\audio.h">
       <Filter>GameLibrary</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Core\AudioID.h">
+      <Filter>GameLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Candy.h">
+      <Filter>MyGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Stage.h">
+      <Filter>MyGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Blast.h">
+      <Filter>MyGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\GameArea.h">
+      <Filter>MyGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\ScoreBoard.h">
+      <Filter>MyGame</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Source\Core\game.rc">
@@ -116,9 +149,6 @@
     </Image>
     <Image Include="Resources\Game Framework.png" />
     <Image Include="Resources\GAME_FRAMEWORK.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="resources\bitmap1.bmp">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\GAME_FRAMEWORK.bmp">
