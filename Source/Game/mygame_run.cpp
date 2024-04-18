@@ -6,6 +6,9 @@
 #include "../Library/gameutil.h"
 #include "../Library/gamecore.h"
 #include "mygame.h"
+#include <string>
+#include <string.h>
+#include <set>
 
 using namespace game_framework;
 
@@ -14,15 +17,14 @@ using namespace game_framework;
 /////////////////////////////////////////////////////////////////////////////
 
 CGameStateRun::CGameStateRun(CGame *g) : CGameState(g)
-{
-}
+{}
 
 CGameStateRun::~CGameStateRun()
-{
-}
+{}
 
 void CGameStateRun::OnBeginState()
 {
+	background.SetTopLeft(0, 0);						// ³]©w­I´ºªº°_©l®y¼Ð
 }
 
 void CGameStateRun::OnMove()							// ï¿½ï¿½ï¿½Ê¹Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
@@ -32,7 +34,7 @@ void CGameStateRun::OnMove()							// ï¿½ï¿½ï¿½Ê¹Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 void CGameStateRun::OnInit()  								// ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¤Î¹Ï§Î³]ï¿½w
 {
-	
+	background.LoadBitmap("Bitmaps\\inGameBG1.bmp");// ¸ü¤J­I´ºªº¹Ï§Î
 }
 
 void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
@@ -67,4 +69,5 @@ void CGameStateRun::OnRButtonUp(UINT nFlags, CPoint point)	// ï¿½Bï¿½zï¿½Æ¹ï¿½ï¿
 
 void CGameStateRun::OnShow()
 {
+	background.ShowBitmap();
 }

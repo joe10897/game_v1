@@ -1,6 +1,9 @@
 #pragma once
+<<<<<<< HEAD
 #include "./gameutil.h"
 #include <ddraw.h>
+=======
+>>>>>>> 10724008a85bb9463bb4cdd2688a47556a03e727
 
 /////////////////////////////////////////////////////////////////////////////
 // �w�qCGame��CGameState�ҨϥΪ��T�Ӫ��A�`��
@@ -161,6 +164,7 @@ namespace game_framework {
 		virtual void OnShow() = 0;
 		CGame *game;
 		CMovingBitmap loadingBitmap;
+		static CMovingBitmap settingButton, settingButtonClicked;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////

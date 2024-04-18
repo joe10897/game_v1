@@ -23,8 +23,8 @@ namespace game_framework {
 
 	/////////////////////////////////////////////////////////////////////////////
 	// CGame: Game Class
-	// 這個class是遊戲的facade，是MFC與各個遊戲狀態的橋樑，如果不增加或減少
-	// 遊戲狀態的話，可以不用管這個class的介面與實作。
+	// �o��class�O�C����facade�A�OMFC�P�U�ӹC�����A�����١A�p�G���W�[�δ��
+	// �C�����A���ܡA�i�H���κ޳o��class�������P��@�C
 	/////////////////////////////////////////////////////////////////////////////
 
 	CGame CGame::instance;
@@ -58,18 +58,18 @@ namespace game_framework {
 
 	void CGame::OnDraw()
 	{
-		CDDraw::BltBackColor(DEFAULT_BG_COLOR);	// 將 Back Plain 塗黑
-		gameState->OnDraw();					// 顯示遊戲中的每個元素
+		CDDraw::BltBackColor(DEFAULT_BG_COLOR);	// �N Back Plain ���
+		gameState->OnDraw();					// ��ܹC�������C�Ӥ���
 		if (!running) {
 			//
-			// 如果在暫停狀態，則顯示Ctrl-Q...
+			// �p�G�b�Ȱ����A�A�h���Ctrl-Q...
 			//
 			// CMovingBitmap bmp;
 			// bmp.LoadBitmap(IDB_CONTINUE);
 			// bmp.SetTopLeft(0, 0);
 			// bmp.ShowBitmap();
 		}
-		CDDraw::BltBackToPrimary();				// 將 Back Plain 貼到螢幕
+		CDDraw::BltBackToPrimary();				// �N Back Plain �K��ù�
 	}
 
 	void  CGame::OnFilePause()
@@ -87,7 +87,7 @@ namespace game_framework {
 		}
 	}
 
-	bool CGame::OnIdle()  // 修改功能不要修改OnIdle()，而應修改OnMove()及OnShow()
+	bool CGame::OnIdle()  // �ק�\�ण�n�ק�OnIdle()�A�����ק�OnMove()��OnShow()
 	{
 		if (suspended) {
 			running = false;
@@ -99,38 +99,42 @@ namespace game_framework {
 		if (!running)
 			return false;
 		//
-		// 控制遊戲是否暫停
+		// �H�U�O�C�����D�j��
 		//
-		CDDraw::BltBackColor(DEFAULT_BG_COLOR);	// 將 Back Plain 塗上預設的顏色
+		CDDraw::BltBackColor(DEFAULT_BG_COLOR);	// �N Back Plain ��W�w�]���C��
 		gameState->OnCycle();
-		CDDraw::BltBackToPrimary();				// 將 Back Plain 貼到螢幕
+		CDDraw::BltBackToPrimary();				// �N Back Plain �K��ù�
 		//
-		// 以下的程式控制遊戲進行的速度，注意事項：
-		// 1. 用Debug mode可以檢視每一次迴圈花掉的時間，令此時間為t。
-		// 2. 從上次離開OnIdle()至此，時間定為33ms，不可刪除，其時間不可低於t。
+		// �H�U���{������C���i�檺�t�סA�`�N�ƶ��G
+		// 1. ��Debug mode�i�H�˵��C�@���j��ᱼ���ɶ��A�O���ɶ���t�C
+		// 2. �q�W�����}OnIdle()�ܦ��A�ɶ��w��33ms�A���i�R���A��ɶ����i�C��t�C
 		//
 		if (SHOW_GAME_CYCLE_TIME)
 			TRACE("Ellipse time for the %d th cycle=%d \n", CSpecialEffect::GetCurrentTimeCount(), CSpecialEffect::GetEllipseTime());
 		CSpecialEffect::DelayFromSetCurrentTime(GAME_CYCLE_TIME);
-		CSpecialEffect::SetCurrentTime();	// 設定離開OnIdle()的時間
+		CSpecialEffect::SetCurrentTime();	// �]�w���}OnIdle()���ɶ�
 		return true;
 	}
 
-	void CGame::OnInit()	// OnInit() 只在程式一開始時執行一次
+	//Game Area//
+	CMovingBitmap CGameState::settingButton;
+	CMovingBitmap CGameState::settingButtonClicked;
+
+	void CGame::OnInit()	// OnInit() �u�b�{���@�}�l�ɰ���@��
 	{
 		//
-		// 啟動亂數
+		// �Ұʶü�
 		//
 		srand((unsigned)time(NULL));
 		//
-		// 開啟DirectX繪圖介面
+		// �}��DirectXø�Ϥ���
 		//
-		CDDraw::Init(SIZE_X, SIZE_Y);							// 設定遊戲解析度
+		CDDraw::Init(SIZE_X, SIZE_Y);							// �]�w�C���ѪR��
 		//
-		// 開啟DirectX音效介面
+		// �}��DirectX���Ĥ���
 		//
-		if (!CAudio::Instance()->Open())						// 開啟音效介面
-			AfxMessageBox("Audio Interface Failed (muted)");	// 無音效介面
+		if (!CAudio::Instance()->Open())						// �}�ҭ��Ĥ���
+			AfxMessageBox("Audio Interface Failed (muted)");	// �L���Ĥ���
 		//
 		// Switch to the first state
 		//
@@ -143,7 +147,7 @@ namespace game_framework {
 	void CGame::OnInitStates()
 	{
 		//
-		// 呼叫每個狀態的OnInitialUpdate
+		// �I�s�C�Ӫ��A��OnInitialUpdate
 		//
 		for (int i = 0; i < NUM_GAME_STATES; i++)
 			gameStateTable[i]->OnInit();
@@ -956,7 +960,11 @@ namespace game_framework {
 
 	CGameState::CGameState(CGame *g)
 	{
+<<<<<<< HEAD
 		game = g;
+=======
+		game = g; 	// �]�wgame��pointer
+>>>>>>> 10724008a85bb9463bb4cdd2688a47556a03e727
 	}
 
 	void CGameState::GotoGameState(int state)
@@ -1022,14 +1030,14 @@ namespace game_framework {
 		CDDraw::BltBackToPrimary();					// �N Back Plain �K��ù�
 	}
 
-	void CGameState::ShowLoading()
-	{
-		CMovingBitmap loading;
-		loading.LoadBitmap("../../Bitmaps/loginLoading.bmp");
-		loading.SetTopLeft(0, 0);
-		loading.ShowBitmap();
-		CDDraw::BltBackToPrimary();
-	}
+	//void CGameState::ShowLoading()
+	//{
+	//	CMovingBitmap loading;
+	//	loading.LoadBitmap("..\Bitmaps\\loginLoading.bmp");
+	//	loading.SetTopLeft(0, 0);
+	//	loading.ShowBitmap();
+	//	CDDraw::BltBackToPrimary();
+	//}
 
 	void CGameState::OnDraw() // Template Method
 	{
