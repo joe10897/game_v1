@@ -1,4 +1,5 @@
-﻿#ifndef GAMEAREA_H
+﻿#pragma once
+#ifndef GAMEAREA_H
 #define GAMEAREA_H
 
 #define MaxHeight 13

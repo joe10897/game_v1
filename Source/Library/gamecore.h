@@ -20,6 +20,7 @@ enum GAME_STATES {
 #include <vector>
 #include <map>
 using namespace std;
+#include "../Game/Stage.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // �^���{�����~�Ϊ�macro
@@ -159,9 +160,12 @@ namespace game_framework {
 		//
 		virtual void OnMove() {}
 		virtual void OnShow() = 0;
+		virtual void SetMusic(bool) {};
+
 		CGame *game;
 		CMovingBitmap loadingBitmap;
 		static CMovingBitmap settingButton, settingButtonClicked;
+		static GameArea gameArea;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////

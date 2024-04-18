@@ -25,11 +25,12 @@ CGameStateRun::~CGameStateRun()
 void CGameStateRun::OnBeginState()
 {
 	background.SetTopLeft(0, 0);						// �]�w�I�����_�l�y��
+	//if (music) CAudio::Instance()->Play(AUDIO_JELLY, true);
 }
 
 void CGameStateRun::OnMove()							// ���ʹC������
 {
-	
+	gameArea.OnMove();
 }
 
 void CGameStateRun::OnInit()  								// �C������Ȥιϧγ]�w

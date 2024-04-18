@@ -117,6 +117,7 @@ namespace game_framework {
 	}
 
 	//Game Area//
+	GameArea CGameState::gameArea;
 	CMovingBitmap CGameState::settingButton;
 	CMovingBitmap CGameState::settingButtonClicked;
 
