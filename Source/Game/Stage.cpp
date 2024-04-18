@@ -4,7 +4,7 @@
 #include <ddraw.h>
 #include <fstream>
 #include <string>
-#include "audio.h"
+#include "../Library/audio.h"
 #include "../Library/gamecore.h"
 #include "Stage.h"
 
